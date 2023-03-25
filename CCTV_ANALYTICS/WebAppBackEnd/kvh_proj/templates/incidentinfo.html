@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %} INFO {% endblock %}
+{% block sty %}
+<style>
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.5s;
+  font-family: "Century Gothic", sans-serif;
+  }
+     .navlist{
+  width: 100%;
+  position: fixed;
+  padding: 5px 10%;
+  background-color: #110e2bbb;
+  }
+  .navlist ul{
+  display: flex;
+  list-style: none;
+  }
+  .navlist ul li:first-child{
+  flex: 1;
+  color: #ffffff;
+  }
+  .navlist ul li h4{
+  font-family: serif;
+  }
+  .navlist ul a{
+  display: block;
+  margin-left: 20px;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  }
+  .navlist ul a:hover{
+  color: #ff8800;
+  }
+  
+  .abt{
+    padding-top: 3.5%;
+    background-color: #5A5A5A;
+    color: white;
+  }
+  .code-img{
+    padding-top: 2%;
+  }
+  .cnt{
+    display: grid;
+    place-items: center;
+  }
+  .chilli-img{
+    width: 650px;
+    height: 350px;
+    padding-top: 2.5%;
+    padding-left: 1%;
+  }
+  
+  .infra-img{
+    width: 650px;
+    height: 350px;
+    padding-top: 2.5%;
+    padding-left: 1%;;
+  }
+  
+  .abt1{
+    padding-left: 1%;
+  
+  }
+  
+  .abt2{
+    padding-left: 1%;
+  }
+</style>
+{% endblock %}
+  <body>
+  {% block content %}
+    <div class="skills">
+      <h2 class="abt">{{incid}}</h2>
+      <div class="skill-row">
+        <div class="cnt">
+
+
+        <img class="code-img" src = {{imgurl}} alt="code-img">
+        </div>
+        <h3 class="abt1">Risk Level :- </h3>
+        <br>
+        <h3 class="abt2">Face Recognized :- </h3>
+
+      </div>
+      <div class="skill-row">
+        <img class="chilli-img" src="https://wallpaperaccess.com/full/316894.jpg" alt="chillies-img" />
+
+
+      </div>
+      <div class="infra">
+        <img  class="infra-img" src="https://img.freepik.com/premium-photo/technology-security-concept-safety-digital-protection-system_142243-71.jpg" alt="">
+      </div>
+      {% endblock %}
+  </body>
+</html>

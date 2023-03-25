@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %} Login {% endblock %}
+{% block sty %}
+<style>
+ *{
+
+margin: 0;
+box-sizing: border-box;
+transition: 0.5s;
+font-family: "Century Gothic", sans-serif;
+}
+   .navlist{
+width: 100%;
+position: fixed;
+padding: 0.25% 10%;
+background-color: #110e2bbb;
+}
+.navlist ul{
+display: flex;
+list-style: none;
+}
+.navlist ul li:first-child{
+flex: 1;
+color: #ffffff;
+}
+.navlist ul li h4{
+font-family: serif;
+}
+.navlist ul a{
+display: block;
+margin-left: 20px;
+font-family: "Century Gothic", sans-serif;
+font-size: 0.9rem;
+color: white;
+text-decoration: none;
+}
+.navlist ul a:hover{
+color: #ff8800;
+}
+.pg{
+  background-color: #F0EEED;
+}
+.hea{
+  background-color: #444444;
+  color: white;
+  padding-top: 30px;
+}
+.ug{
+  margin-top: 20px;
+}
+    </style>
+    <style media="screen">
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {background-color: coral;}
+</style>
+{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br><br>
+<div style = "padding-left : 500px; padding-right: 500px; padding-top: 200px; ">
+<h1 style = "margin-top: 10px;"> Login </h1>
+    <form action = "" method = POST>
+        {% csrf_token %}
+            {{ form|crispy}}
+            <p>Don't have an account? Create one <a href = "/sign-up">Here</a>!</p>
+            <button type = "submit" class = "btn btn-success">Login</button>
+    </form>
+</div>
+{% endblock %}

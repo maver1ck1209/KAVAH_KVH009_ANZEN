@@ -1,0 +1,89 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+transition: 0.5s;
+font-family: "Century Gothic", sans-serif;
+}
+   .navlist{
+width: 100%;
+position: fixed;
+padding: 5px 10%;
+background-color: #110e2bbb;
+}
+.navlist ul{
+display: flex;
+list-style: none;
+}
+.navlist ul li:first-child{
+flex: 1;
+color: #ffffff;
+}
+.navlist ul li h4{
+font-family: serif;
+}
+.navlist ul a{
+display: block;
+margin-left: 20px;
+font-family: "Century Gothic", sans-serif;
+font-size: 0.9rem;
+color: white;
+text-decoration: none;
+}
+.navlist ul a:hover{
+color: #ff8800;
+}
+body{
+    background-color:black;
+    color:black;
+    margin: 0px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(135deg,#71b7e7,#9b59b6)
+}
+
+
+#css{
+  margin-left: 29px;
+  color: white;
+}
+#html{
+  color: white;
+}
+
+#res{
+  height: 100%;
+  width: 90%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg,#71b7e7,#9b59b6)
+
+}
+#sub{
+  height: 100%;
+  width: 90%;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg,#71b7e7,#9b59b6)
+
+}
+
+.details{
+  background: black;
+  color: #8D9EFF;
+  width: 50%;
+  margin-left: 350px;
+  length: 50px:
+  border-width: medium;
+}

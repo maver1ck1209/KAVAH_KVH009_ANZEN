@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %} Incidents {% endblock %}
+{% block sty %}
+<style>
+      *{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+transition: 0.5s;
+font-family: "Century Gothic", sans-serif;
+}
+   .navlist{
+width: 100%;
+position: fixed;
+padding: 0.25% 10%;
+background-color: #110e2bbb;
+}
+.navlist ul{
+display: flex;
+list-style: none;
+}
+.navlist ul li:first-child{
+flex: 1;
+color: #ffffff;
+}
+.navlist ul li h4{
+font-family: serif;
+}
+.navlist ul a{
+display: block;
+margin-left: 20px;
+font-family: "Century Gothic", sans-serif;
+font-size: 0.9rem;
+color: white;
+text-decoration: none;
+}
+.navlist ul a:hover{
+color: #ff8800;
+}
+.pg{
+  background-color: #F0EEED;
+}
+.hea{
+  background-color: #444444;
+  color: white;
+  padding-top: 30px;
+}
+.ug{
+  margin-top: 20px;
+}
+/* Active/current link */
+.sidebar a.active {
+  background-color: #00008B;
+  color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #4682B4;
+ color:white;
+}
+    </style>
+    <style media="screen">
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {background-color: coral;}
+    </style>
+{% endblock %}
+  </head>
+  <body>
+    
+    {% block content %}
+    <div style = "padding:50px">
+    
+    <div class="ug">
+    <h3>Incident Data</h3>
+    <table style = "padding-left:50px; padding-right:50px">
+      <thead>
+      <tr>
+        <th>Incident ID</th>
+        <th>Incident Type</th>
+        <th>Camera ID</th>
+        <th>District</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Time</th>
+        <th>Directions</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!-- {% if d %}  
+    {% for i in d %}
+    <form method="POST" action="incident_dash">
+    <input type="text" value={{i.IncidentId}} hidden>
+      <button type=""> --> -->
+      <tr>
+        <td><a href="/incidentinfo">{{i.IncidentId}}</a></td>
+        <td class = "sidebar">{{i.IncidentType}}</td>
+        <td>{{i.CamId}}</td>
+        <td>{{i.District}}</td>
+        <td>{{i.Latitude}}</td>
+        <td>{{i.Longitude}}</td>
+        <td>{{i.Time}}</td>
+        <td><a href = "{{i.gmap}}"><button>Directions</button></a></td>
+
+      </tr>
+    <!-- </button>
+    </form>
+    {% endfor %}
+    {% endif %} -->
+    </tbody>
+    </table>
+    </div>
+  </div>
+    {% endblock %}
+  </body>
+</html>
