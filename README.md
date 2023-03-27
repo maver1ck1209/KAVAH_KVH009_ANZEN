@@ -1,2 +1,4 @@
 # KAVAH_KVH009_ANZEN
 With the exponential increase in street crime and illegal activities over the past years, the government is under a lot of pressure to ensure the safety of citizens. Automating tasks of monitoring sectors through CCTV cameras ensures 24/7 hour footage of public spaces and enables law enforcers to maintain records of areas with a high-crime rate, thus driving more man-power to such places. However, for the task of detection of such illegal activities, our project proposes to develop a web application that can highlight any such crime detected through the CCTV footage and simultaneously alert the nearest police station for action. This system would also store the data generated about the location, date and type of crime and also display a summarised report in the law department database.
+
+While refering to the project start by opening the ppt to see the outputs and various modules for easy understanding
